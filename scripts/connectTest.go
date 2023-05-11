@@ -25,7 +25,6 @@ func connect() {
 	NODE_RPC_URI := os.Getenv("NODE_RPC_URI")
 
 	// connect to blockain node rpc
-
 	client, err := ethclient.DialContext(context.Background(), NODE_RPC_URI)
 	if err != nil {
 		log.Fatal(err)

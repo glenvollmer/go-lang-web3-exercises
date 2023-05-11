@@ -6,19 +6,24 @@ import (
 	"io/ioutil"
 	"log"
 	"math/big"
+	"os"
 
 	"github.com/ethereum/go-ethereum/accounts/keystore"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/joho/godotenv"
 )
 
-// var infuraURI = "https://goerli.infura.io/v3/c15571d3be9c4e6d848ed4dc78e92cab"
 var addOne = "6e39ffbd75e3f8bda19c283bc32917578b2abcc0"
 var addTwo = "0aa0c3b0ae20292827594333052471197fc07f27"
 
 func testnetTest() {
-	client, err := ethclient.Dial(infuraURI)
+	// load environment variables
+	godotenv.Load()
+	NODE_RPC_URI := os.Getenv("NODE_RPC_URI")
+
+	client, err := ethclient.Dial(NODE_RPC_URI)
 	if err != nil {
 		log.Fatal(err)
 	}
