@@ -1,3 +1,7 @@
+// This script demonstrates simple web3 methods used to...
+// ~ load a wallet and account from a keystore json file using passphrase
+// ~ create a transaction with suggested gas prices to deploy the smart contract to the blockchain using smart contract binding
+
 package main
 
 import (
