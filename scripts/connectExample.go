@@ -19,7 +19,7 @@ import (
 	"github.com/joho/godotenv"
 )
 
-func connect() {
+func main() {
 	// load environment variables
 	godotenv.Load()
 	NODE_RPC_URI := os.Getenv("NODE_RPC_URI")

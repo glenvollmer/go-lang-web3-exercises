@@ -18,7 +18,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 )
 
-func keystoreTest() {
+func main() {
 	// wallet keystore password
 	password := "password"
 
@@ -46,7 +46,7 @@ func keystoreTest() {
 		log.Fatal(err)
 	}
 
-	// read wallets private key as hexadecimal and print to the console
+	// read wallets binary private key as hexadecimal and print to the console
 	pData := crypto.FromECDSA(key.PrivateKey)
 	privateKey := hexutil.Encode(pData)
 	fmt.Println(privateKey)

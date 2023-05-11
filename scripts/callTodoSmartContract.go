@@ -27,12 +27,12 @@ func main() {
 	// load environment variables
 	godotenv.Load()
 	NODE_RPC_URI := os.Getenv("NODE_RPC_URI")
-	WALLET_JSON := os.Getenv("WALLET_JSON")
+	WALLET_JSON_ONE := os.Getenv("WALLET_JSON_ONE")
 	WALLET_PASSWORD := os.Getenv("WALLET_PASSWORD")
 	TODO_CONTRACT_ADDRESS := os.Getenv("TODO_CONTRACT_ADDRESS")
 
 	// read wallet keystore JSON
-	b, err := ioutil.ReadFile(WALLET_JSON)
+	b, err := ioutil.ReadFile(WALLET_JSON_ONE)
 	if err != nil {
 		log.Fatal(err)
 	}
