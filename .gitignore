@@ -25,3 +25,5 @@ go.work
 .env
 
 wallet/*
+key.txt
+
