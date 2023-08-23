@@ -58,7 +58,7 @@ contract ToDo {
     // method to remove a task from the tasks list by id
     function remove(uint _id) public isOwner {
         // check to make sure that the id being passed is in the task list
-        require(tasks.length < _id, "Out of bounds");
+        require(tasks.length > _id, "Out of bounds");
 
         // iterate over the tasks list, in order to move the task to be deleted to the end of the task list
         for (uint i = _id; i < tasks.length -1; i++) {
